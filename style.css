@@ -1,0 +1,372 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f0f;
+    color:#fff;
+    transition:0.4s;
+}
+
+
+
+
+/* Dark / Light Mode */
+
+body.light{
+    background:#f5f5f5;
+    color:#111;
+}
+
+
+/* Navbar */
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h2{
+    color:#d4af37;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#d4af37;
+}
+
+#mode{
+    background:#d4af37;
+    border:none;
+    padding:12px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+    background:url("https://th.bing.com/th/id/OIP.gAR1PA9LNitw1ViNKwXC6AHaEK?w=326&h=183&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3") center/cover;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
+
+.content{
+    position:relative;
+    z-index:1;
+    width:80%;
+}
+
+.content h1{
+    font-size:60px;
+    color:#fff;
+}
+
+.content p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+
+/* Search Box */
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.search-box input,
+.search-box select{
+    padding:15px;
+    width:220px;
+    border:none;
+    border-radius:8px;
+}
+
+.search-box button,
+.card button,
+.emi button,
+form button{
+    padding:15px 30px;
+    border:none;
+    background:#d4af37;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+
+/* Common Section */
+
+section{
+    padding:90px 8%;
+}
+
+section h1{
+    text-align:center;
+    font-size:40px;
+    color:#d4af37;
+    margin-bottom:40px;
+}
+
+
+/* Property Cards */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:#1a1a1a;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 0 15px rgba(212,175,55,0.3);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card h2,
+.card p,
+.card button{
+    margin:15px;
+}
+
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.5s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+
+/* Why Choose Us */
+
+.features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.feature{
+    background:#1b1b1b;
+    width:250px;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    border:1px solid #d4af37;
+}
+
+.feature h2{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+
+/* Reviews */
+
+.review{
+    max-width:700px;
+    margin:auto;
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.review h3{
+    margin-top:15px;
+    color:#d4af37;
+}
+
+
+/* Agents */
+
+#agents .card{
+    text-align:center;
+}
+
+#agents img{
+    height:300px;
+}
+
+
+/* EMI Calculator */
+
+.emi{
+    text-align:center;
+}
+
+.emi input{
+    display:block;
+    width:350px;
+    margin:15px auto;
+    padding:15px;
+    border-radius:8px;
+    border:none;
+}
+
+#result{
+    margin-top:20px;
+    color:#d4af37;
+}
+
+
+/* Contact */
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input,
+form textarea{
+    margin:10px;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+}
+
+form textarea{
+    height:120px;
+    resize:none;
+}
+
+
+/* Footer */
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    color:#888;
+}
+
+
+/* Light Mode Styles */
+
+body.light nav{
+    background:rgba(255,255,255,0.9);
+}
+
+body.light nav ul li a{
+    color:#111;
+}
+
+body.light .card,
+body.light .feature,
+body.light .review{
+    background:white;
+    color:#111;
+}
+
+body.light footer{
+    background:#ddd;
+    color:#333;
+}
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .content h1{
+        font-size:40px;
+    }
+
+    .content p{
+        font-size:16px;
+    }
+
+    .emi input{
+        width:90%;
+    }
+
+}
